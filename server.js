@@ -3,7 +3,7 @@ console.log("node is running")
 let express = require("express");
 //web app, local host
 let app = express();
-let port = 3000;
+let port = process.env.PORT || 3000;//heroku assegna automaticamente la porta
 let server = app.listen(port);
 app.use(express.static("public"));
 // carica libreria socket attraverso command promt
